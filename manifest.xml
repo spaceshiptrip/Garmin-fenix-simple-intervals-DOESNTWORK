@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xml/connectiq ../../schema/iq/schema_4.xsd" version="4">
+    <!-- App Metadata -->
+    <iq:application id="com.example.intervalapp" uuid="YOUR-UNIQUE-UUID-HERE" store-id="example.intervalapp" type="watch-app">
+        <iq:permissions>
+            <!-- Permissions for sensors -->
+            <iq:uses-permission id="System.sensor.heart_rate"/>
+            <iq:uses-permission id="System.vibrate"/>
+            <iq:uses-permission id="System.activity"/>
+        </iq:permissions>
+
+        <!-- App Info -->
+        <iq:languages>
+            <iq:language>en</iq:language>
+        </iq:languages>
+        <iq:display-name>Interval Trainer</iq:display-name>
+        <iq:description>This app monitors heart rate for running intervals and vibrates if the heart rate is below 140 bpm for more than 1 minute. It allows start/stop functionality and uploads session data to Garmin Connect.</iq:description>
+        <iq:version>
+            <iq:version-name>1.0.0</iq:version-name>
+            <iq:build-number>1</iq:build-number>
+        </iq:version>
+
+        <!-- Supported Devices -->
+        <iq:products>
+            <iq:product id="fenix5XPlus" min-sdk-version="3.2.0"/>
+            <!-- Add more devices if you want to support them -->
+        </iq:products>
+
+        <!-- App Icon (can be optional, but recommended) -->
+        <iq:icon resources="icon.png"/>
+
+        <!-- Resources (e.g., strings and images, if any) -->
+        <iq:resources>
+            <iq:drawable-list>
+                <!-- Add your drawable resources here (icons, images) -->
+            </iq:drawable-list>
+        </iq:resources>
+    </iq:application>
+</iq:manifest>
